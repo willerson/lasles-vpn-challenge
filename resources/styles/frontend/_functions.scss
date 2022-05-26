@@ -1,0 +1,95 @@
+/* ------------------------------------------------------------ *\
+  Functions
+  @see https://sass-lang.com/documentation/at-rules/function
+\* --------------------------------.---------------------------- */
+
+@use 'sass:map';
+@use 'sass:meta';
+@use 'sass:math';
+
+/*
+ * Remove unit from a given value.
+ */
+@function strip-unit($value) {
+  @if (meta.type-of($value) == 'number' and not math.is-unitless($value)) {
+    @return math.div($value, $value * 0 + 1);
+  }
+
+  @return $value;
+}
+
+/*
+ * Convert px to rem.
+ */
+@function rem($value: 16px, $base: $font-size-base-px) {
+  @return math.div(strip-unit($value), strip-unit($base)) * 1rem;
+}
+
+/*
+ * Convert px to em.
+ */
+@function em($value: 16px, $base: $font-size-base-px) {
+  @return math.div(strip-unit($value), strip-unit($base)) * 1em;
+}
+
+/*
+ * Get a color from mapped value.
+ */
+@function color($key, $palette: map.deep-merge($colors, $theme-colors)) {
+  @return map.get($palette, $key);
+}
+
+/*
+ * Get a CSS color variable
+ */
+@function css-color($key, $palette: map.deep-merge($colors, $theme-colors)) {
+  $color-fallback: color($key, $palette);
+  $css-variable: --#{$variable-prefix}#{$key};
+
+  @return var(#{$css-variable}, #{$color-fallback});
+}
+
+/*
+ * Get font-size from mapped value.
+ */
+@function font-size($key, $sizes: $font-sizes) {
+  @return map.get($sizes, $key);
+}
+
+/*
+ * Get a CSS font-ize variable
+ */
+@function css-font-size($key, $sizes: $font-sizes) {
+  $size-fallback: font-size($key, $sizes);
+  $css-variable: --#{$variable-prefix}font-size-#{$key};
+
+  @return var(#{$css-variable}, #{$size-fallback});
+}
+
+/*
+ * Get font-weight from mapped value.
+ */
+@function font-weight($key, $weights: $font-weights) {
+  @return map.get($weights, $key);
+}
+
+/*
+ * Get a CSS font-weight variable.
+ */
+@function css-font-weight($key, $weights: $font-weights) {
+  $weight-fallback: font-weight($key, $weights);
+  $css-variable: --#{$variable-prefix}font-weight-#{$key};
+
+  @return var(#{$css-variable}, #{$weight-fallback});
+}
+
+/*
+ * Set the line-height.
+ *
+ * @param {Pixel} $line-height - The line height in pixel.
+ * @param {Pixel} $font-size - The font size in pixel.
+ * @return {Float Number} - The divided value of $line-height / $font-size
+ */
+@function line-height($line-height, $font-size) {
+  @return math.div($line-height, strip-unit($font-size));
+}

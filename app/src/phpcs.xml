@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="Fuerza">
+	<description>WP Emerge Source Classes Coding Standard</description>
+
+	<exclude-pattern>*/*.css</exclude-pattern>
+	<exclude-pattern>*/*.js</exclude-pattern>
+
+	<rule ref="Generic.CodeAnalysis.UnusedFunctionParameter" />
+
+	<rule ref="Generic.Commenting.Todo" />
+
+	<rule ref="Squiz.WhiteSpace.SuperfluousWhitespace" />
+
+	<rule ref="Squiz.Classes.ValidClassName"/>
+
+	<rule ref="PSR1.Methods.CamelCapsMethodName"/>
+
+	<rule ref="Generic.Arrays.DisallowLongArraySyntax" />
+
+	<rule ref="WordPress">
+		<exclude name="PEAR.NamingConventions.ValidClassName" />
+		<exclude name="PSR2.Methods.MethodDeclaration" />
+		<exclude name="Squiz.Commenting.FileComment" />
+		<exclude name="Universal.Arrays.DisallowShortArraySyntax" />
+		<exclude name="WordPress.Files.FileName" />
+		<exclude name="WordPress.NamingConventions.ValidFunctionName" />
+	</rule>
+</ruleset>

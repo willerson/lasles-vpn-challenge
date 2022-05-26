@@ -1,0 +1,75 @@
+/* stylelint-disable */
+/*
+ *
+ * Gutenberg editor.
+ * Style the Gutenberg editor with the styles to match
+ * with the front-end.
+ *
+ */
+
+/*
+ * 1. General styles
+ * 2. Typography
+ */
+
+/*
+ * 1. General styles.
+ * Set the global with for all Gutenberg blocks.
+ * - This should be the same as your article width.
+ */
+.wp-block {
+  max-width: none;
+}
+
+// Font family for Headings.
+.editor-block-list__layout .editor-block-list__block,
+.editor-post-title__block .editor-post-title__input,
+h1.rich-text.block-editor-rich-text__editable,
+h2.rich-text.block-editor-rich-text__editable,
+h3.rich-text.block-editor-rich-text__editable,
+h4.rich-text.block-editor-rich-text__editable,
+h5.rich-text.block-editor-rich-text__editable,
+h6.rich-text.block-editor-rich-text__editable,
+.has-medium-font-size,
+#post-title-0,
+table {
+  font-family: $font-family-base;
+}
+
+// Font family for body text.
+.editor-block-list__layout .editor-block-list__block p,
+.rich-text.block-editor-rich-text__editable.wp-block-paragraph,
+.block-editor-block-list__layout.is-root-container,
+ul,
+ol {
+  font-family: $font-family-base;
+}
+
+// Font family for code.
+pre, code, kbd, tt, var {
+  font-family: $font-family-code;
+}
+
+/*
+ * 2. Typograaphy
+ */
+
+h2.rich-text.block-editor-rich-text__editable {
+  @include font-size($h2-font-size);
+}
+
+h3.rich-text.block-editor-rich-text__editable {
+  @include font-size($h3-font-size);
+}
+
+h4.rich-text.block-editor-rich-text__editable {
+  @include font-size($h4-font-size);
+}
+
+h5.rich-text.block-editor-rich-text__editable {
+  @include font-size($h5-font-size);
+}
+
+h6.rich-text.block-editor-rich-text__editable {
+  @include font-size($h6-font-size);
+}

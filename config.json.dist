@@ -1,0 +1,93 @@
+{
+  "variables": {
+    "color": {
+      "black": "#000",
+      "white": "#fff",
+      "primary": "#f53838",
+      "secondary": "#F53855",
+      "beige": "#ffecec",
+      "green": "#2fab73",
+      "yellow": "#FEA250",
+      "darken": "#0b132a",
+      "gray-800": "#4F5665",
+      "gray-700": "#AFB5C0",
+      "gray-600": "#DDDDDD",
+      "gray-400": "#DDE0E4",
+      "gray-300": "#EEEFF2",
+      "gray-200": "#F6F6F6",
+      "gray-100": "#F8F8F8"
+    },
+    "gradient": {
+      "majorelle-blue-to-neon-blue": "linear-gradient(90deg, #5845E4 0%, #29199F 100%)"
+    },
+    "font-size": {
+      "xs": "0.875rem",
+      "sm": "1rem",
+      "md": "1.125rem",
+      "lg": "1.25rem",
+      "xl": "1.563rem",
+      "xxl": "2.188rem",
+      "xxxl": "3.125rem"
+    },
+    "grid-breakpoint": {
+      "xs": "0",
+      "sm": "576px",
+      "md": "768px",
+      "lg": "992px",
+      "xl": "1400px",
+      "xxl": "1600px",
+      "xxxl": "1900px"
+    },
+    "font-weight": {
+      "thin": 100,
+      "extra-light": 200,
+      "light": 300,
+      "regular": 400,
+      "normal": 400,
+      "medium": 500,
+      "semi-bold": 600,
+      "bold": 700,
+      "extra-bold": 800,
+      "black": 900
+    }
+  },
+  "supports": {
+    "social-media": [
+      "facebook",
+      "instagram",
+      "twitter",
+      "pinterest",
+      "linkedin"
+    ]
+  },
+  "development": {
+    "url": "https://fuerzastudio.local/",
+    "port": 3000
+  },
+  "bundles": [
+    "frontend",
+    "admin",
+    "login",
+    "editor"
+  ],
+  "release": {
+    "configWhitelist": [
+      "variables"
+    ],
+    "include": [
+      "app/",
+      "dist/",
+      "templates/",
+      "languages/",
+      "vendor/",
+      "views/",
+      "config.json",
+      "LICENSE",
+      "README.md",
+      "readme.txt",
+      "screenshot.png",
+      "style.css",
+      "*.php"
+    ]
+  }
+}

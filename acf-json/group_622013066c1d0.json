@@ -1,0 +1,69 @@
+{
+    "key": "group_622013066c1d0",
+    "title": "Component: Title",
+    "fields": [
+        {
+            "key": "field_62201346f4d15",
+            "label": "Line Break Visibility",
+            "name": "line_break_visibility",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "has-line-breaks": "Don't Remove",
+                "no-line-breaks-below-tablet": "Remove on Resolutions Below Tablet",
+                "no-line-breaks-below-mobile": "Remove on Resolutions Below Mobile"
+            },
+            "default_value": "has-line-breaks",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_6220130679c6a",
+            "label": "Title",
+            "name": "title",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "very_simple",
+            "media_upload": 0,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "modified": 1646269439
+}

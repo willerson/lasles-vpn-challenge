@@ -1,0 +1,38 @@
+/* stylelint-disable */
+/*
+ *
+ * WYSIWYG Field.
+ * Style the ACF WYSIWYG field.
+ *
+ */
+
+.acf-field-wysiwyg {
+  // Set the switch tab height.
+  .wp-switch-editor {
+    height: 35px;
+  }
+
+  // Remove unnecessary toolbar buttons.
+  // in Very Simple toolbar.
+  [data-toolbar="very_simple"] .quicktags-toolbar {
+    input[value="link"],
+    input[value="b-quote"],
+    input[value="img"],
+    input[value="ul"],
+    input[value="ol"],
+    input[value="li"],
+    input[value="code"],
+    input[value="more"] {
+      display: none !important;
+    }
+  }
+
+  // Reduce the edit area if is the title field.
+  &[data-name="title"] {
+    iframe,
+    textarea {
+      height: 60px !important;
+      min-height: 30px;
+    }
+  }
+}

@@ -1,0 +1,119 @@
+// IN PROGRESS
+
+// @use 'sass:map';
+
+/*
+.cards-listing {
+  @include listing('.card', (
+    cols: 2,
+    gutter-x: px-to-rem(15px),
+    gutter-y: px-to-rem(20px),
+    breakpoints: (
+      md: (
+        cols: 3,
+        gutter-x: px-to-rem(15px)
+        gutter-y: px-to-rem(20px)
+      ),
+      lg: (
+        cols: 4,
+      ),
+      1320px: (
+        cols: 5,
+        gutter-x: px-to-rem(20px)
+      ),
+    )
+  ));
+}
+*/
+
+// @mixin listing($selector, $options) {
+//   $gutter-x: map.get($options, 'gutter-x');
+//   $gutter-y: map.get($options, 'gutter-y');
+
+//   display: flex;
+//   flex-wrap: wrap;
+
+//   #{$selector} {
+//     flex: 1 0 0%;
+//     max-width: 100%;
+//     width: 100%;
+//   }
+// }
+
+// .cards-listing {
+//   @include listing('.card', (
+//     cols: 2,
+//     gutter-x: 15px,
+//     gutter-y: 20px,
+//     breakpoints: (
+//       md: (
+//         cols: 3,
+//         gutter-x: 15px,
+//         gutter-y: 20px,
+//       ),
+//       lg: (
+//         cols: 4,
+//       ),
+//       1320px: (
+//         cols: 5,
+//         gutter-x: 20px,
+//       ),
+//     )
+//   ));
+// }
+
+// @include list-grid(
+//   $attrs: (
+//     479px: (
+//       columns: 2,
+//       gutter: 15px,
+//       selector: '.product-card'
+//     ),
+//     719px: (
+//       columns: 3,
+//       gutter: 28px
+//     )
+//   )
+// );
+
+// @mixin list-grid($attrs) {
+//   $_queries: map-keys($attrs);
+//   $_attrs: map-get($attrs, nth($_queries, 1));
+//   $_gutter: map-get($_attrs, gutter);
+//   $_columns: map-get($_attrs, columns);
+//   $_selector: map-get($_attrs, selector);
+
+//   display: -webkit-box;
+//   display: -ms-flexbox;
+//   display: flex;
+//   -ms-flex-wrap: wrap;
+//   flex-wrap: wrap;
+
+//   #{$_selector} {
+//     width: 100%;
+//   }
+
+//   @each $_media in $_queries {
+//     $_media-attrs: map-get($attrs, $_media);
+//     $_media-columns: map-get($_media-attrs, columns);
+//     $_media-gutter: if(map-get($_media-attrs, gutter), map-get($_media-attrs, gutter), $_gutter);
+
+//     @media not all and (max-width: #{$_media}) {
+//       $_columns: $_media-columns;
+
+//       #{$_selector} {
+//         width: calc(
+//           (100% / #{$_media-columns} + #{$_media-gutter / $_media-columns}) - #{$_media-gutter}
+//         );
+//       }
+
+//       #{$_selector}:nth-child(#{$_columns}n) {
+//         margin-right: 0;
+//       }
+
+//       #{$_selector}:not(:nth-child(#{$_media-columns}n)) {
+//         margin-right: $_media-gutter;
+//       }
+//     }
+//   }
+// }

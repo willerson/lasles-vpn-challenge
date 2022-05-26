@@ -1,0 +1,33 @@
+// Completely remove the default button appearance.
+@mixin remove-button-appearance() {
+  appearance: none;
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  outline: inherit;
+  padding: 0;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+// Completely remove the link appearance.
+@mixin link-unstyled {
+  &,
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+@mixin btn {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.3s;
+  user-select: none;
+  vertical-align: middle;
+}

@@ -1,0 +1,136 @@
+@use 'sass:math';
+
+@keyframes checkboxEffect {
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(1.6);
+  }
+}
+
+/*
+ *
+ * Checkbox.
+ *
+ */
+
+.c-checkbox {
+  --checkbox-color: #d9d9d9;
+  --checkbox-active-color: #1890ff;
+
+  $checkbox-size: rem(16px);
+
+  align-items: center;
+  cursor: pointer;
+  display: inline-flex;
+  position: relative;
+
+  &__inner {
+    display: inline-block;
+    position: relative;
+  }
+
+  &__input {
+    inset: 0;
+    opacity: 0;
+    position: absolute;
+    z-index: 1;
+  }
+
+  &__checkbox {
+    @include width-height($checkbox-size);
+    background-color: css-color('white');
+    border: rem(1px) solid var(--checkbox-color);
+    border-radius: rem(2px);
+    display: block;
+    position: relative;
+    transition: all 0.3s;
+
+    &::after {
+      border: rem(2px) solid css-color('white');
+      border-left: 0;
+      border-top: 0;
+      content: '';
+      height: rem(9.14px);
+      left: 21.5%;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      transform: rotate(45deg) scale(0) translate(-50%, -50%);
+      transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6), opacity 0.1s;
+      width: rem(5.71px);
+    }
+  }
+
+  &__label {
+    margin-bottom: 0;
+    padding: 0 rem(8px);
+  }
+
+  /*
+   *
+   * Hover.
+   *
+   */
+
+  &:not(&--disabled):hover & {
+    &__checkbox {
+      border-color: var(--checkbox-active-color);
+    }
+  }
+
+  /*
+   *
+   * Checked.
+   *
+   */
+
+  &__input:checked + &__checkbox {
+    background-color: var(--checkbox-active-color);
+    border-color: var(--checkbox-active-color);
+
+    &::after {
+      opacity: 1;
+      transform: rotate(45deg) scale(1) translate(-50%, -50%);
+      transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+    }
+  }
+
+  &--checked & {
+    &__inner::after {
+      @include position-fill;
+      animation: checkboxEffect 0.36s ease-in-out;
+      animation-fill-mode: both;
+      border: rem(1px) solid var(--checkbox-active-color);
+      border-radius: 50%;
+      content: '';
+    }
+  }
+
+  /*
+   *
+   * Disabled.
+   *
+   */
+
+  &--disabled {
+    color: rgba(#000, 0.25);
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  &--disabled & {
+    &__checkbox {
+      background-color: #f5f5f5;
+    }
+
+    &__label,
+    &__checkbox {
+      cursor: not-allowed;
+    }
+  }
+}

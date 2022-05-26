@@ -1,0 +1,68 @@
+/* ------------------------------------------------------------ *\
+  Fonts.
+  Add your custom fonts here. You can use a tool to convert your
+  fonts in to web format (woff, woff2). To do it you can use
+  https://transfonter.org
+\* ------------------------------------------------------------ */
+@font-face {
+  font-display: swap;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 300;
+  src: url('~@fonts/Rubik/Rubik-Light.woff2') format('woff2'),
+    url('~@fonts/Rubik/Rubik-Light.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: font-weight('normal');
+  src: url('~@fonts/Rubik/Rubik-Regular.woff2') format('woff2'),
+    url('~@fonts/Rubik/Rubik-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  src: url('~@fonts/Rubik/Rubik-Medium.woff2') format('woff2'),
+    url('~@fonts/Rubik/Rubik-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 600;
+  src: url('~@fonts/Rubik/Rubik-SemiBold.woff2') format('woff2'),
+    url('~@fonts/Rubik/Rubik-SemiBold.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  src: url('~@fonts/Rubik/Rubik-Bold.woff2') format('woff2'),
+    url('~@fonts/Rubik/Rubik-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 800;
+  src: url('~@fonts/Rubik/Rubik-ExtraBold.woff2') format('woff2'),
+    url('~@fonts/Rubik/Rubik-ExtraBold.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 900;
+  src: url('~@fonts/Rubik/Rubik-Black.woff2') format('woff2'),
+    url('~@fonts/Rubik/Rubik-Black.woff') format('woff');
+}

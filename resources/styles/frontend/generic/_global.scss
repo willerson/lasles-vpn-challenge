@@ -1,0 +1,32 @@
+@use 'sass:map';
+
+/* ------------------------------------------------------------ *\
+  Global
+  WARNING: Don't add your code here, probably should have a
+  better place to put it, please align with your TL (Team Leader)
+  about it.
+\* ------------------------------------------------------------ */
+
+/*
+ * FIXING: Select2 dropdown not closing
+ * when clicking outside without select an
+ * options.
+ *
+ * @see https://stackoverflow.com/questions/52297349/select2-does-not-close-the-choices-box-on-clicking-outside-it-with-closeonselec
+ */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  padding-top: rem(map.get($header-height, sm));
+
+  @include media-breakpoint-up(md) {
+    padding-top: rem(map.get($header-height, md));
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding-top: rem(map.get($header-height, lg));
+  }
+}

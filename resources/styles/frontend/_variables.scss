@@ -1,0 +1,135 @@
+/*
+  READ FIRST!!!
+  1. Some variables is available on the project that will not be listed here.
+  2. To know what is these variables you can go to frontend.config.scss file.
+  3. Keep in mind that this file SHOULD be modified as necessary to the project that you're working on.
+  4. You can also create your own variables for the project.
+  5. Don't be afraid to try something new. :)
+*/
+
+/* ------------------------------------------------------------ *\
+  Options
+\* ------------------------------------------------------------ */
+// Prefix for :root CSS variables
+$variable-prefix: '';
+
+/* ------------------------------------------------------------ *\
+  Colors
+\* ------------------------------------------------------------ */
+// We are removing the grays colors by default.
+// You can set it if needed.
+$grays: ();
+
+// We are re-assigning the $color to $colors because
+// the bootstrap use $colors internally and WP Emerge use $color
+// because he generate each color variable.
+$colors: $color;
+
+// You can create your theme colors by passing the
+// colors defined above. So, you can set the primary, secondary, etc,
+// colors. Feel free to create your awesome theme. :)
+$theme-colors: (
+  'primary': #f53838,
+);
+
+// Body background color.
+// The background color applyed on the body element.
+$body-bg: #fff;
+
+// Body color
+// The default color for texts on the website.
+$body-color: #4f5665;
+
+/* ------------------------------------------------------------ *\
+  Typography
+  Font families, font sizes, line heights...
+\* ------------------------------------------------------------ */
+$font-family-sans-serif: 'Rubik';
+$font-family-serif: Times, 'Times New Roman', serif;
+
+// Uncomment the line below to define the font-family base of the website.
+// $font-family-base: var(--#{$variable-prefix}font-sans-serif);
+
+// Uncomment the line below to define the font-family for headings.
+// $headings-font-family: null;
+
+// Base font size
+// Was needed to set in px to be used internaly. Bootstrap
+// has a $font-size-base that is 1rem (equals 16px).
+$font-size-base-px: 16px;
+// $font-size-base: rem($font-size-base-px);
+// $font-size-sm: rem($font-size-sm);
+// $font-size-lg: rem($font-size-lg);
+
+// Heading's font sizes.
+// $h1-font-size: $font-size-xl;
+// $h2-font-size: $font-size-l;
+// $h3-font-size: $font-size-m;
+// $h4-font-size: $font-size-s;
+// $h5-font-size: $font-size-xs;
+
+// We are re-assigning the $font-size to $font-sizes because
+// the bootstrap use $font-sizes internally and WP Emerge use $font-size
+// because he generate each font-size variable.
+$font-sizes: $font-size;
+
+$font-weights: $font-weight;
+
+/* ------------------------------------------------------------ *\
+  Breakpoints, Containers and Grid.
+\* ------------------------------------------------------------ */
+
+// Breakpoints.
+// @see https://getbootstrap.com/docs/5.0/layout/breakpoints
+$grid-breakpoints: $grid-breakpoint;
+
+// Containers.
+// @see https://getbootstrap.com/docs/5.0/layout/containers
+$container-max-widths: (
+  xl: 1140px,
+  xxl: 1320px
+);
+
+// Grid.
+// @see https://getbootstrap.com/docs/5.0/layout/grid/#customizing-the-grid
+$grid-columns: 12;
+$grid-gutter-width: 1.5rem;
+
+/* ------------------------------------------------------------ *\
+  Header and Footer
+\* ------------------------------------------------------------ */
+$header-height: (
+  sm: 60px,
+  md: 70px,
+  lg: 80px
+);
+
+/* ------------------------------------------------------------ *\
+  Utilities API.
+  @see https://getbootstrap.com/docs/5.0/utilities/api/
+\* ------------------------------------------------------------ */
+$utilities: (
+  'display': (
+    responsive: false,
+    property: display,
+    class: d,
+    values: inline-block block flex inline-flex none
+  ),
+);
+
+/* ------------------------------------------------------------ *\
+  Custom
+  Add your custom variables here.
+\* ------------------------------------------------------------ */
+// Custom breakpoints
+$breakpoint-responsive-xs: 413px;
+$breakpoint-responsive-adminbar-mobile: 600px;
+$breakpoint-responsive-adminbar-tablet: 782px;
+
+// Admin Bar
+$adminbar-height-desktop: 32px;
+$adminbar-height-tablet: 46px;
+
+// Transitions
+$trs: 0.3s;
+$trs-lg: 0.5s;

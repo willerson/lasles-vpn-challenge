@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    // Linters
+    "dbaeumer.vscode-eslint",
+    "stylelint.vscode-stylelint",
+    "ikappas.phpcs",
+    "mrmlnc.vscode-scss"
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "extends": "stylelint-config-sass-guidelines",
+  "ignoreFiles": [
+    "node_modules/**/**/*.scss",
+    "resources/styles/*.config.scss",
+    "resources/styles/frontend/_sprite.scss",
+    "resources/styles/frontend/vendor/*.scss"
+  ],
+  "rules": {
+    "no-empty-source": null,
+    "indentation": 2,
+    "max-nesting-depth": 3,
+    "max-empty-lines": 1,
+    "declaration-block-semicolon-newline-after": "always",
+    "block-opening-brace-newline-after": "always",
+    "block-closing-brace-newline-before": "always",
+    "block-closing-brace-empty-line-before": "never",
+    "block-no-empty": true,
+    "comment-no-empty": true,
+    "selector-no-qualifying-type": [
+      true,
+      {
+        "ignore": ["attribute", "class"]
+      }
+    ],
+    "selector-class-pattern": [
+      "^[a-z]([a-z0-9-]+)?(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+){0,2}$",
+      {
+        "resolveNestedSelectors": true,
+        "message": "Selector should be written in lowercase with hyphens and underscores (selector-class-pattern)"
+      }
+    ],
+    "property-no-unknown": [
+      true,
+      {
+        "ignoreProperties": [
+          "contain",
+          "appearance",
+          "/^font-/",
+          "-webkit-box-orient",
+          "box-orient"
+        ]
+      }
+    ],
+    "at-rule-empty-line-before": [
+      "always",
+      {
+        "ignore": [
+          "after-comment"
+        ],
+        "ignoreAtRules": [
+          "else"
+        ],
+        "except": [
+          "blockless-after-blockless",
+          "first-nested"
+        ]
+      }
+    ],
+    "custom-property-empty-line-before": [
+      "always",
+      {
+        "except": [
+          "after-custom-property",
+          "first-nested"
+        ]
+      }
+    ],
+    "rule-empty-line-before": [
+      "always",
+      {
+        "except": [
+          "after-single-line-comment",
+          "first-nested"
+        ],
+        "ignore": [
+          "after-comment"
+        ]
+      }
+    ]
+  }
+}
+

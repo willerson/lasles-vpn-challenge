@@ -1,0 +1,38 @@
+/* stylelint-disable */
+/*
+ *
+ * ACF Block.
+ * Style the edit mode of blocks created by the ACF.
+ * The purpose is to do the ACF inputs and components to match
+ * with the WordPress design.
+ *
+ */
+
+.acf-block-component.acf-block-body {
+  .acf-fields.-sidebar:before {
+    background: #fff;
+  }
+
+  .acf-block-fields {
+    border-color: $eirie-black;
+  }
+
+  .acf-tab-wrap.-left .acf-tab-group {
+    a {
+      border-color: $chinese-white;
+      color: $eirie-black;
+      font-weight: 500;
+      padding: 16px;
+      text-align: left;
+    }
+
+    .active a,
+    a:hover {
+      color: var(--wp-admin-theme-color);
+    }
+  }
+
+  > div > .acf-fields > .acf-field > .acf-label {
+    display: none;
+  }
+}

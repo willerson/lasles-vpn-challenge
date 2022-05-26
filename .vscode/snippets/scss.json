@@ -1,0 +1,13 @@
+{
+	"add doc comment": {
+    "prefix": "css:doc",
+    "body": [
+      "/*",
+      " *",
+      " * $1",
+      " *",
+      " */"
+    ],
+    "description": "add doc comment"
+  }
+}

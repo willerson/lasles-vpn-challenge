@@ -1,0 +1,107 @@
+/* ------------------------------------------------------------ *\
+    Settings
+\* ------------------------------------------------------------ */
+
+@import '~@styles/frontend/functions';
+@import '~@styles/editor.config';
+@import '~@styles/shared/variables';
+@import '~@styles/shared/editor';
+
+/* ------------------------------------------------------------ *\
+    Theme essencial
+\* ------------------------------------------------------------ */
+@import '~@styles/frontend/variables';
+@import '~@styles/frontend/generic/fonts';
+
+/* ------------------------------------------------------------ *\
+    Vendor
+\* ------------------------------------------------------------ */
+
+// Import Bootstrap functions/mixins/vars.
+// The rest will be imported inside a scope.
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import '~@styles/frontend/generic/root';
+
+.acf-block-body {
+  // Import bootstrap styles inside this scope
+  // so it doesn't conflict with the rest of WP backend
+  @import '~bootstrap/scss/reboot';
+  @import '~bootstrap/scss/containers';
+  @import '~bootstrap/scss/grid';
+
+  // These are some styles that Bootstrap applies to the body.
+  // Because we are importing Bootstrap inside a scope, apply them manually.
+  @include font-size($font-size-base);
+  background-color: $body-bg;
+  color: $body-color;
+  font-family: $font-family-base;
+  font-weight: $font-weight-base;
+  line-height: $line-height-base;
+}
+
+/* ------------------------------------------------------------ *\
+    Theme
+\* ------------------------------------------------------------ */
+
+@import '~@styles/frontend/sprite';
+@import '~@styles/frontend/mixins/index';
+@import '~@styles/frontend/placeholders/index';
+
+.acf-block-body {
+  // Theme styles
+  @import '~@styles/frontend/generic/wordpress';
+  @import '~@styles/frontend/components/index';
+  @import '~@styles/frontend/blocks/index';
+
+  /* stylelint-disable-next-line */
+  p {
+    // Reset font size for paragraphs
+    // (something else is setting it in backend)
+    font-size: inherit;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    // Reset heading color
+    // (something else is setting it in backend)
+    color: inherit;
+  }
+}
+
+.wp-block {
+  max-width: none;
+}
+
+/* ------------------------------------------------------------ *\
+    Editor
+\* ------------------------------------------------------------ */
+@import './variables';
+// @import './gutenberg';
+// @import './components';
+
+/* stylelint-disable */
+.acf-block-component.acf-block-body {
+  .acf-block-fields {
+    border-color: $eirie-black;
+  }
+
+  .acf-tab-wrap.-left .acf-tab-group {
+    a {
+      border-color: $chinese-white;
+      color: $eirie-black;
+    }
+
+    .active a,
+    a:hover {
+      color: var(--wp-admin-theme-color);
+    }
+  }
+}
+
+/* stylelint-enable */

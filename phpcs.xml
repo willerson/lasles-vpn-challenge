@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="Fuerza">
+	<description>Theme Coding Standard</description>
+
+	<exclude-pattern>app/src</exclude-pattern>
+	<exclude-pattern>dist</exclude-pattern>
+	<exclude-pattern>node_modules</exclude-pattern>
+	<exclude-pattern>resources</exclude-pattern>
+	<exclude-pattern>tests</exclude-pattern>
+	<exclude-pattern>vendor</exclude-pattern>
+	<exclude-pattern>*/*.css</exclude-pattern>
+	<exclude-pattern>*/*.js</exclude-pattern>
+
+	<rule ref="Generic.CodeAnalysis.UnusedFunctionParameter" />
+
+	<rule ref="Generic.Commenting.Todo" />
+
+	<rule ref="Squiz.WhiteSpace.SuperfluousWhitespace" />
+
+	<rule ref="Generic.Arrays.DisallowLongArraySyntax" />
+
+	<rule ref="WordPress">
+		<exclude name="Universal.Arrays.DisallowShortArraySyntax" />
+	</rule>
+
+	<rule ref="WordPress.Security.EscapeOutput">
+		<properties>
+			<property name="customAutoEscapedFunctions" type="array" value="fuerza_attributes,fuerza_block_attrs"/>
+		</properties>
+	</rule>
+
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="string" value="fuerza" />
+		</properties>
+	</rule>
+</ruleset>

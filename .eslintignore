@@ -1,0 +1,5 @@
+/resources/build
+/dist/
+/node_modules/
+
+commitlint.config.js

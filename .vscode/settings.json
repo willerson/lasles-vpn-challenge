@@ -1,0 +1,20 @@
+{
+  /*
+   * Styles settings.
+   * All settings that is need to run stylelint accordly.
+   */
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  // The stylelint.vscode-stylelint extension is required to work.
+  "stylelint.validate": ["css", "scss"],
+
+  /*
+   * Scripts settings.
+   * All settings that is need to run eslint accordly.
+   */
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": ["javascript", "typescript"]
+}

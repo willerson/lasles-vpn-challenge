@@ -1,0 +1,107 @@
+@use 'sass:map';
+@use 'sass:math';
+
+/*
+ *
+ * Header
+ *
+ */
+.c-header {
+  background: css-color('gray-100');
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+
+  &__body {
+    align-items: center;
+    display: flex;
+    height: rem(map.get($header-height, sm));
+
+    @include media-breakpoint-up(md) {
+      height: rem(map.get($header-height, md));
+    }
+
+    @include media-breakpoint-up(lg) {
+      height: rem(map.get($header-height, lg));
+    }
+  }
+
+  &__menu {
+    --viewport-height: auto;
+
+    flex: 1 1;
+    margin-left: rem(50px);
+
+    @include media-breakpoint-down(lg) {
+      background: css-color('gray-100');
+      bottom: 0;
+      height: var(--viewport-height);
+      left: 0;
+      margin: 0;
+      opacity: 0;
+      overflow: auto;
+      padding: rem(10px) math.div($grid-gutter-width, 2);
+      position: fixed;
+      right: 0;
+      top: rem(map.get($header-height, sm));
+      transition-duration: $trs;
+      transition-property: opacity, visibility;
+      visibility: hidden;
+      z-index: 998;
+    }
+  }
+
+  &__actions {
+    margin-left: rem(30px);
+  }
+
+  .c-btn-nav {
+    display: none;
+    margin-left: rem(20px);
+
+    @include media-breakpoint-down(lg) {
+      display: block;
+    }
+  }
+}
+
+.mobile-menu-visible .c-header {
+  &__menu {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/**
+ *
+ * Admin Bar
+ *
+ */
+.admin-bar {
+  .c-header {
+    top: $adminbar-height-desktop;
+
+    @include admin-bar-tablet {
+      top: $adminbar-height-tablet;
+    }
+
+    @include admin-bar-mobile {
+      &.c-header--sticky {
+        top: 0;
+      }
+    }
+  }
+
+  .c-header__menu {
+    @include desktop-down {
+      top: map.get($header-height, lg) - 10;
+    }
+
+    @include desktop-up {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}

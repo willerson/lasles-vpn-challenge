@@ -1,0 +1,132 @@
+@use 'sass:math';
+
+@keyframes radioEffect {
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(1.6);
+  }
+}
+
+/*
+ *
+ * Radio.
+ *
+ */
+
+.c-radio {
+  --radio-color: #d9d9d9;
+  --radio-active-color: #1890ff;
+
+  $radio-size: rem(16px);
+
+  align-items: center;
+  cursor: pointer;
+  display: inline-flex;
+  position: relative;
+
+  &__inner {
+    display: inline-block;
+    position: relative;
+  }
+
+  &__input {
+    inset: 0;
+    opacity: 0;
+    position: absolute;
+    z-index: 1;
+  }
+
+  &__radio {
+    @include width-height($radio-size);
+    background-color: css-color('white');
+    border: rem(1px) solid var(--radio-color);
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    transition: all 0.3s;
+
+    &::after {
+      @include width-height($radio-size);
+      background-color: var(--radio-active-color);
+      border-radius: $radio-size;
+      content: '';
+      left: 50%;
+      margin-left: math.div($radio-size, -2);
+      margin-top: math.div($radio-size, -2);
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      transform: scale(0);
+      transition: all 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+    }
+  }
+
+  &__label {
+    margin-bottom: 0;
+    padding: 0 rem(8px);
+  }
+
+  /*
+   *
+   * Hover.
+   *
+   */
+
+  &:not(&--disabled):hover & {
+    &__radio {
+      border-color: var(--radio-active-color);
+    }
+  }
+
+  /*
+   *
+   * Checked.
+   *
+   */
+
+  &__input:checked + &__radio {
+    border-color: var(--radio-active-color);
+
+    &::after {
+      opacity: 1;
+      transform: scale(0.5);
+    }
+  }
+
+  &--checked & {
+    &__inner::after {
+      @include position-fill;
+      animation: radioEffect 0.36s ease-in-out;
+      animation-fill-mode: both;
+      border: rem(1px) solid var(--radio-active-color);
+      border-radius: 50%;
+      content: '';
+    }
+  }
+
+  /*
+   *
+   * Disabled.
+   *
+   */
+
+  &--disabled {
+    color: rgba(#000, 0.25);
+  }
+
+  &--disabled & {
+    &__radio {
+      border-color: #d9d9d9;
+    }
+
+    &__label,
+    &__radio {
+      cursor: not-allowed;
+    }
+  }
+}

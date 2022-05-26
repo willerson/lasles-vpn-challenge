@@ -1,0 +1,8 @@
+/* This is the generic styles for blocks.
+ *
+ * All blocks have the class`c-block` so we can set
+ * default padding that will be applyied to each one.
+ */
+.c-block {
+  padding: rem(60px) 0;
+}

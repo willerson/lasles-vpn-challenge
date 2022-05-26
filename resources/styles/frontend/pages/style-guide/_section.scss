@@ -1,0 +1,36 @@
+/*
+ *
+ * Section
+ *
+ */
+.g-section {
+  padding: 50px 0;
+
+  &__title {
+    color: $color-g-text;
+    font-family: 'Open Sans';
+    font-size: 30px;
+    font-weight: 300;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+
+    &::before {
+      background-color: $color-g-detail;
+      content: '';
+      display: inline-block;
+      height: 1px;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+    }
+
+    span {
+      background-color: $body-bg;
+      padding: 0 20px;
+      position: relative;
+    }
+  }
+}

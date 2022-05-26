@@ -1,0 +1,21 @@
+{
+  "create a javascript component": {
+    "prefix": "js:component",
+    "body": [
+      "export default class ${1:Example} {",
+      "  constructor() {",
+      "    // The selector that identifies the main element that this script is attached to.",
+      "    this.selector = '';",
+      "  }",
+      "",
+      "  // eslint-disable-next-line class-methods-use-this",
+      "  bootstrap() {",
+      "    // The code here is only executed when the selector is present on the page.",
+      "    console.log('Component started');",
+      "  }",
+      "}",
+      ""
+    ],
+    "description": "create a javascript component"
+  }
+}

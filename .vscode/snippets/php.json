@@ -1,0 +1,69 @@
+{
+  "open PHP tag": {
+    "prefix": "php",
+    "body": [
+      "<?php $1 ?>"
+    ],
+    "description": "open PHP tag"
+  },
+  "import component view": {
+    "prefix": "wp:view:component",
+    "body": [
+      "<?php fuerza_render( 'views/components/$1', [] ); ?>"
+    ],
+    "description": "import component view"
+  },
+	"add doc comment": {
+    "prefix": "wp:doc",
+    "body": [
+      "/**",
+      " * $1.",
+      " *",
+      " * @package",
+      " */"
+    ],
+    "description": "add doc comment"
+  },
+  "create a component controller": {
+    "prefix": "wp:component:controller",
+    "body": [
+      "<?php",
+      "",
+      "namespace Fuerza\\Components;",
+      "",
+      "use Fuerza\\Interfaces\\ComponentInterface;",
+      "",
+      "class $1Component implements ComponentInterface {",
+      "\tpublic function __construct( \\$file, \\$context ) {",
+      "\t\t\\$this->file     = \\$file;",
+      "\t\t\\$this->defaults = [",
+      "\t\t\t// Add the default values for props here.",
+      "\t\t];",
+      "\t\t\\$this->context  = array_merge(",
+      "\t\t\t\\$this->defaults,",
+      "\t\t\t\\$context,",
+      "\t\t);",
+      "\t}",
+      "",
+      "\tpublic function getContext( \\$file, \\$context ) {",
+      "\t\treturn fuerza_defaults(",
+      "\t\t\tarray_merge(",
+      "\t\t\t\t\\$this->defaults,",
+      "\t\t\t\t[",
+      "\t\t\t\t\t// Add your own properties here.",
+      "\t\t\t\t\t'class' => [ &\\$this, 'getClass' ]",
+      "\t\t\t\t]",
+      "\t\t\t),",
+      "\t\t\t\\$context,",
+      "\t\t);",
+      "\t}",
+      "",
+      "\tpublic function getClass() {",
+      "\t\treturn 'my-custom-class';",
+      "\t}",
+      "}",
+      ""
+    ],
+    "description": "create a component controller"
+  }
+}

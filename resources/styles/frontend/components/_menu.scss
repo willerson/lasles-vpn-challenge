@@ -1,0 +1,45 @@
+/*
+ *
+ * Menu.
+ *
+ */
+.c-menu {
+  .menu-item {
+    font-size: css-font-size('xs');
+    position: relative;
+    transition: color $trs ease;
+
+    &.current-menu-item {
+      font-weight: font-weight('extra-bold');
+    }
+  }
+
+  &,
+  .sub-menu {
+    @include list-unstyled;
+  }
+
+  a {
+    @include link-unstyled;
+    display: inline-block;
+    padding: rem(10px) 0;
+  }
+
+  .sub-menu {
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: calc(100% + 9px);
+    transform: translateY(20px);
+    transition: $trs ease;
+    transition-property: transform, opacity, visibility;
+    visibility: hidden;
+
+    @include desktop-up {
+      background: css-color('gray-300');
+      box-shadow: 0 2px 15px rgba(219, 219, 219, 0.25);
+      min-width: rem(178px);
+      padding: rem(16px);
+    }
+  }
+}

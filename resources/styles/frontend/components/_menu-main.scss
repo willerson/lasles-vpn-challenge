@@ -1,0 +1,63 @@
+/*
+ *
+ * Menu main.
+ *
+ */
+
+.c-menu-main {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include media-breakpoint-down('md') {
+    display: block;
+  }
+
+  .menu-item {
+    padding: 0 rem(10px);
+  }
+
+  /*
+   *
+   * Sub menu.
+   *
+   */
+  .menu-item-has-children {
+    &:hover {
+      &::before {
+        content: '';
+        height: 50px;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 100%;
+      }
+
+      > a::after {
+        transform: translateY(-50%) rotate(-180deg);
+      }
+
+      > .sub-menu {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+      }
+    }
+
+    > a {
+      padding: rem(10px);
+      padding-right: rem(24px);
+      position: relative;
+
+      &::after {
+        @include background(contain, 50%);
+        @include position-absolute-center-y;
+        @include width-height(24px);
+        background-image: url('~@images/menu-arrow.svg');
+        content: '';
+        display: inline-block;
+        right: 0;
+        transition: transform $trs;
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+/* ------------------------------------------------------------ *\
+  Style Guide
+  Everything that is applyed as styles for the page* style-guide
+\* ------------------------------------------------------------ */
+
+/*
+ *
+ * Variables.
+ *
+ */
+$color-g-text: #000;
+$color-g-detail: #cbcbcb;
+
+/*
+ *
+ * Imports.
+ *
+ */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap');
+@import './section';
+@import './header';

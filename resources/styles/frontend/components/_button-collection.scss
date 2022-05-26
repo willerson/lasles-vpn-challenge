@@ -1,0 +1,10 @@
+/*
+ *
+ * Button collection.
+ *
+ */
+
+.c-btn-collection {
+  @include list-inline;
+  margin-bottom: 0;
+}
