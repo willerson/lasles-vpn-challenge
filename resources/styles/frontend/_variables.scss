@@ -62,11 +62,12 @@ $font-size-base-px: 16px;
 // $font-size-lg: rem($font-size-lg);
 
 // Heading's font sizes.
-// $h1-font-size: $font-size-xl;
-// $h2-font-size: $font-size-l;
-// $h3-font-size: $font-size-m;
-// $h4-font-size: $font-size-s;
-// $h5-font-size: $font-size-xs;
+$h1-font-size: $font-size-xxxl;
+$h2-font-size: $font-size-xxl;
+$h3-font-size: $font-size-xl;
+$h4-font-size: $font-size-lg;
+$h5-font-size: $font-size-md;
+$h6-font-size: $font-size-sm;
 
 // We are re-assigning the $font-size to $font-sizes because
 // the bootstrap use $font-sizes internally and WP Emerge use $font-size

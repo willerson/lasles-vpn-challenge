@@ -1,0 +1,14 @@
+/*
+ *
+ * Nav
+ *
+ */
+
+.c-nav {
+  @include list-unstyled();
+
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    gap: 2.5rem;
+  }
+}

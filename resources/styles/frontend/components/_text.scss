@@ -1,0 +1,27 @@
+/**
+ *
+ * text.
+ *
+ */
+
+.c-text {
+  &--xs {
+    @include font-size(0.875rem);
+  }
+
+  &--sm {
+    @include font-size(1rem);
+  }
+
+  &--md {
+    @include font-size(1.125rem);
+  }
+
+  &--ls {
+    @include font-size(1.25rem);
+  }
+
+  &--xl {
+    @include font-size(1.563rem);
+  }
+}

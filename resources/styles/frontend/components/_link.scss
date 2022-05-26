@@ -1,0 +1,17 @@
+/*
+ *
+ * Link.
+ *
+ */
+
+.c-link {
+  @include font-size(1rem);
+  @include link-unstyled;
+  color: css-color('gray-800');
+  cursor: pointer;
+
+  &--bold {
+    color: css-color('darken');
+    font-weight: font-weight('bold');
+  }
+}

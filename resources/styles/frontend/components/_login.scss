@@ -1,0 +1,14 @@
+/*
+ *
+ * Buttons.
+ *
+ */
+
+.c-login {
+  @include list-unstyled();
+
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    gap: 1.875rem;
+  }
+}

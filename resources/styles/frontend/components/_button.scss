@@ -7,9 +7,8 @@
 .c-btn {
   @include remove-button-appearance;
   @include btn;
-  border: 1px solid transparent;
   border-radius: rem(4px);
-  padding: rem(6px) rem(12px);
+  transition: all 0.2s ease;
 
   /*
    *
@@ -20,22 +19,27 @@
    */
 
   &--primary {
-    background-color: css-color('gray-800');
+    background-color: css-color('primary');
+    border-radius: 0.625rem;
     color: css-color('white');
+    font-weight: font-weight('bold');
 
     &:hover {
-      background-color: lighten(color('gray-800'), 10);
       color: css-color('white');
+      filter: brightness(120%);
     }
   }
 
   &--primary-o {
-    border-color: css-color('gray-800');
-    color: css-color('gray-800');
+    background-color: css-color('white');
+    border: 2px solid css-color('primary');
+    border-radius: 3.125rem;
+    color: css-color('primary');
+    font-weight: font-weight('bold');
 
     &:hover {
-      background-color: css-color('gray-800');
-      color: css-color('white');
+      color: css-color('primary');
+      filter: brightness(120%);
     }
   }
 
@@ -54,8 +58,15 @@
    */
 
   &--lg {
-    font-size: rem(20px);
-    padding: rem(8px) rem(16px);
+    padding: rem(17.5px) rem(16px);
+  }
+
+  &--md {
+    padding: rem(13px) rem(16px);
+  }
+
+  &--sm {
+    @include font-size(1rem);
   }
 }
 

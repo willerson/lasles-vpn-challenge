@@ -23,9 +23,14 @@
 			<?php \Fuerza::render( 'views/partials/pagination' ); ?>
 		</div> -->
 
+
+		<?php \Fuerza::render( 'views/components/testimonial' ); ?>
+		<?php \Fuerza::render( 'views/components/login' ); ?>
+		<?php \Fuerza::render( 'views/components/nav' ); ?>
+
+
 		<?php
 			$guides = [
-				'colors',
 				'headings',
 				'buttons',
 				'form',

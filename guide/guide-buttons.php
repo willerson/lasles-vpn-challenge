@@ -14,17 +14,9 @@
 		</h2>
 
 		<div class="g-section__body">
-			<ul class="c-btn-collection">
-				<li class="c-btn-collection__item">
-					<a href="#" class="c-btn c-btn--primary">Primary</a>
-				</li>
-				<li class="c-btn-collection__item">
-					<a href="#" class="c-btn c-btn--primary-o">Primary</a>
-				</li>
-				<li class="c-btn-collection__item">
-					<a href="#" class="c-btn c-btn--primary-o c-btn--disabled" disabled>Primary</a>
-				</li>
-			</ul>
+			<a href="#" class="c-btn c-btn--primary c-btn--lg">Primary</a>
+			<a href="#" class="c-btn c-btn--primary-o c-btn--md">Primary</a>
+			<a href="#" class="c-btn c-btn--primary-o c-btn--disabled" disabled>Primary</a>
 		</div>
 	</div>
 </section>
