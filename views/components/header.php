@@ -14,14 +14,26 @@
 			</div>
 
 			<div class="c-header__menu">
-				<?php $composer->mainMenu(); ?>
+				<ul class="c-nav">
+					<li><a href="http://" class="c-link">About</a></li>
+					<li><a href="http://" class="c-link">Feature</a></li>
+					<li><a href="http://" class="c-link">Pricing</a></li>
+					<li><a href="http://" class="c-link">Testimonials</a></li>
+					<li><a href="http://" class="c-link">Help</a></li>
+				</ul>
 			</div>
 
-			<?php fuerza_component( 'button-collection', $header_buttons + [ 'class' => 'c-header__actions' ] ); ?>
+			<!-- <?php fuerza_component( 'button-collection', $header_buttons + [ 'class' => 'c-header__actions' ] ); ?> -->
 
-			<button class="c-btn-nav">
-				<span></span>
-			</button>
+			<div>
+				<ul class="c-login">
+					<li><a href="http://" class="c-link c-link--bold">Sign In</a></li>
+					<li><a href="http://" class="c-btn c-btn--primary-o">Sign Up</a></li>
+				</ul>
+			</div>
+
+			<div class="c-btn-nav">
+			</div>
 		</div>
 	</div>
 </header>

@@ -15,6 +15,7 @@
   z-index: 999;
 
   &__body {
+    @include padding-y(2.851rem);
     align-items: center;
     display: flex;
     height: rem(map.get($header-height, sm));
@@ -101,7 +102,7 @@
 
     @include desktop-up {
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
     }
   }
 }

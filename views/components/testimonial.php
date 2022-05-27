@@ -14,12 +14,14 @@
 
 		<article class="c-testimonial">
 			<header>
-				<div>
-					<figure>
+				<div class="c-testimonial__profile">
+					<figure class="c-testimonial__figure">
 						<img src="<?php echo esc_url( \Fuerza::core()->assets()->getAssetUrl( 'images/exemple-avatar.png' ) ); ?>" alt="">
 					</figure>
-					<p class="">Viezh Robert</p>
-					<span class="c-text--xs">Warsaw, Poland</span>
+					<div>
+						<p  class="c-testimonial__name">Viezh Robert</p>
+						<span class="c-text--xs">Warsaw, Poland</span>
+					</div>
 				</div>
 				<span>
 					4.5
