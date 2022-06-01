@@ -1,0 +1,23 @@
+/**
+ *
+ * Top Section.
+ *
+ */
+
+.c-top-section {
+  @include margin-x(auto);
+  max-width: 34.688rem;
+
+  h2 {
+    @include font-size(2.188rem);
+    color: css-color('darken');
+    font-weight: font-weight('medium');
+    margin-bottom: 1.25rem;
+    text-align: center;
+  }
+
+  p {
+    @include font-size(1rem);
+    text-align: center;
+  }
+}

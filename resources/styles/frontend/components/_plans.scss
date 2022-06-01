@@ -1,0 +1,68 @@
+/*
+ *
+ * Plans.
+ *
+ */
+
+.c-plans {
+  @include list-unstyled();
+
+  display: grid;
+  gap: 3.125rem;
+  justify-content: center;
+
+  @include media-breakpoint-up(lg) {
+    grid-template-columns: repeat(3, 330px);
+  }
+
+  &__plan {
+    border: 2px solid color('gray-600');
+    border-radius: 0.625rem;
+    display: inline-flex;
+    flex-direction: column;
+    height: rem(760px);
+    justify-content: space-between;
+    max-width: 100%;
+    padding: rem(79px) rem(70px) rem(50px) rem(70px);
+    text-align: center;
+    width: 20.625rem;
+
+    img {
+      @include image-size();
+    }
+
+    &--active {
+      border: 2px solid color('primary');
+    }
+  }
+
+  &__figure {
+    @include margin-x(auto);
+    margin-bottom: 2.1rem;
+    max-width: rem(145px);
+  }
+
+  h5 {
+    color: css-color('darken');
+    margin-bottom: 2.44rem;
+  }
+
+  &__list {
+    @include list-unstyled();
+
+    &-item {
+      @include font-size(0.875rem);
+      margin-bottom: 1.19rem;
+      text-align: left;
+
+      svg {
+        margin-right: rem(20px);
+      }
+    }
+  }
+
+  h3 {
+    color: css-color('darken');
+    margin-bottom: rem(20px);
+  }
+}

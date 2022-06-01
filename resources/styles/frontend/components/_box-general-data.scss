@@ -1,0 +1,41 @@
+/*
+ *
+ * Plans.
+ *
+ */
+
+.c-box-general {
+  @include list-unstyled();
+
+  align-items: center;
+  background-color: color('white');
+  border-radius: 0.625rem;
+  box-shadow: 0 40px 65px -25px rgb(13, 16, 37, 10%);
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 71.25rem;
+  padding: rem(37px) rem(90px);
+
+  svg {
+    height: rem(55px);
+    margin-right: rem(36.5px);
+    width: rem(55px);
+  }
+
+  h3 {
+    color: css-color('darken');
+    font-weight: font-weight('bold');
+  }
+
+  &__data {
+    align-items: center;
+    display: flex;
+  }
+
+  &__vertical-bar {
+    background-color: css-color('gray-300');
+    height: rem(125.57px);
+    width: rem(2px);
+  }
+}

@@ -5,6 +5,8 @@
  */
 
 .c-text {
+  color: color('darken');
+
   &--xs {
     @include font-size(0.875rem);
   }
@@ -23,5 +25,17 @@
 
   &--xl {
     @include font-size(1.563rem);
+  }
+
+  &--bold {
+    font-weight: font-weight('bold');
+  }
+
+  &--medium {
+    font-weight: font-weight('medium');
+  }
+
+  &--normal {
+    font-weight: font-weight('normal');
   }
 }

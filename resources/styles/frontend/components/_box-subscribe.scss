@@ -1,0 +1,20 @@
+.c-box-subscribe {
+  align-items: center;
+  background-color: color('white');
+  border-radius: 0.625rem;
+  box-shadow: 0 40px 65px -25px rgb(13, 16, 37, 10%);
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 71.25rem;
+  padding: 3.672rem 4.375rem;
+
+  .c-top-section {
+    margin: 0;
+
+    h2,
+    p {
+      text-align: left;
+    }
+  }
+}

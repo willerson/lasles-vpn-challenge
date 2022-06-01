@@ -23,6 +23,9 @@
 			<?php \Fuerza::render( 'views/partials/pagination' ); ?>
 		</div> -->
 
+		<?php \Fuerza::render( 'views/components/box-general-data' ); ?>
+		<?php \Fuerza::render( 'views/components/plans' ); ?>
+		<?php \Fuerza::render( 'views/components/box-subscribe' ); ?>
 
 		<?php \Fuerza::render( 'views/components/testimonial' ); ?>
 		<?php \Fuerza::render( 'views/components/login' ); ?>
@@ -31,6 +34,7 @@
 
 		<?php
 			$guides = [
+				'top-section',
 				'headings',
 				'buttons',
 				'form',

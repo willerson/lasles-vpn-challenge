@@ -1,0 +1,11 @@
+/*
+  *
+  * Block: Testimonials.
+  *
+*/
+
+.b-testimonials {
+  &__items {
+    @include list-unstyled();
+  }
+}

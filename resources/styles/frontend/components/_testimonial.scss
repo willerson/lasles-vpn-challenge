@@ -9,10 +9,28 @@
   border-radius: 0.625rem;
   height: 14.375rem;
   padding: 1.875rem;
+  transition: all 0.2s ease;
   width: 25rem;
 
-  &__profile {
+  &--active {
+    border: 2px solid color('primary');
+    box-shadow: 0 75px 114px -48px rgb(0, 0, 0, 8%);
+  }
+
+  &__header {
+    align-items: center;
     display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+  }
+
+  &__profile {
+    align-items: center;
+    display: flex;
+
+    p {
+      margin: 0;
+    }
   }
 
   &__figure {
@@ -26,5 +44,7 @@
     }
   }
 
-  &__name  {}
+  &__review {
+    display: inline-block;
+  }
 }
