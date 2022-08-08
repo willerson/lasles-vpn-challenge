@@ -274,7 +274,7 @@
                     "name": "review",
                     "type": "number",
                     "instructions": "",
-                    "required": 0,
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -286,7 +286,7 @@
                     "prepend": "",
                     "append": "",
                     "min": "",
-                    "max": "",
+                    "max": 5,
                     "step": ""
                 },
                 {
@@ -345,5 +345,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1653936921
+    "modified": 1659647875
 }

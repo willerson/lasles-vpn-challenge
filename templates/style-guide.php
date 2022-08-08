@@ -17,20 +17,21 @@
 			<img src="<?php echo esc_url( Fuerza::core()->assets()->getAssetUrl( 'images/logo-styleguide.svg' ) ); ?>" alt="" />
 		</header>
 
-		<!-- <div class="page__content">
+		<div class="page__content">
 			<?php the_content(); ?>
 
 			<?php \Fuerza::render( 'views/partials/pagination' ); ?>
-		</div> -->
+		</div>
 
+		<?php \Fuerza::render( 'views/blocks/global-network' ); ?>
+		<?php \Fuerza::render( 'views/blocks/resources' ); ?>
+		<?php \Fuerza::render( 'views/blocks/hero' ); ?>
+		<?php \Fuerza::render( 'views/components/testimonial' ); ?>
+		<?php \Fuerza::render( 'guide/guide-sitemap-list' ); ?>
 		<?php \Fuerza::render( 'views/components/box-general-data' ); ?>
 		<?php \Fuerza::render( 'views/components/plans' ); ?>
-		<?php \Fuerza::render( 'views/components/box-subscribe' ); ?>
-
-		<?php \Fuerza::render( 'views/components/testimonial' ); ?>
 		<?php \Fuerza::render( 'views/components/login' ); ?>
 		<?php \Fuerza::render( 'views/components/nav' ); ?>
-
 
 		<?php
 			$guides = [
@@ -44,5 +45,8 @@
 		<?php foreach ( $guides as $guide ) : ?>
 			<?php \Fuerza::render( 'guide/guide-' . $guide, [ 'id' => $guide ] ); ?>
 		<?php endforeach; ?>
+
+
+		<?php \Fuerza::render( 'views/blocks/box-subscribe' ); ?>
 	</div>
 <?php endwhile; ?>

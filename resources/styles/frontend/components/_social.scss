@@ -1,0 +1,24 @@
+.c-social {
+  @include list-unstyled();
+  display: flex;
+  width: max-content;
+
+  &__button {
+    @include circle(3.36rem, color(white));
+    box-shadow: 0 20px 20px rgba(219, 219, 219, 0.6);
+    margin-right: 2rem;
+
+    a {
+      @include flex-center;
+      @include width-height(100%);
+      padding: 0.6rem;
+      text-decoration: none;
+    }
+
+    svg {
+      @include width-height(100%);
+      color: color('primary');
+      margin-top: 0.1rem;
+    }
+  }
+}

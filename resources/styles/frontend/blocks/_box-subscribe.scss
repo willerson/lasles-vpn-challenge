@@ -1,0 +1,55 @@
+.b-subscribe {
+  height: 8.125rem;
+  position: relative;
+  width: 100%;
+
+  &__box {
+    background-color: css-color('white');
+    border-radius: 0.625rem;
+    box-shadow: 0 40px 65px -25px rgb(13, 16, 37, 10%);
+    left: 50%;
+    margin: 0 auto;
+    max-width: 100%;
+    padding: rem(35px) rem(40px);
+    position: absolute;
+    transform: translate(-50%, 0);
+    width: 100%;
+    z-index: 10;
+
+    @include media-breakpoint-up(md) {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      max-width: 100%;
+      padding: 3.672rem 4.375rem;
+    }
+
+    .c-top-section {
+      margin: 0 auto 2rem;
+      max-width: 23.125rem;
+
+      @include media-breakpoint-up(md) {
+        margin: 0;
+      }
+
+      h2,
+      p {
+        text-align: left;
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+    .c-btn {
+      display: block;
+      margin-inline: auto;
+      width: max-content;
+
+      @include media-breakpoint-up(md) {
+        margin: unset;
+      }
+    }
+  }
+}

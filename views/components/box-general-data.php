@@ -9,7 +9,7 @@
 <section id="<?php echo esc_html( 'guide-' . $id ); ?>" class="g-section">
 	<div class="g-container container">
 		<h2 class="g-section__title">
-			<span>Plans</span>
+			<span>Data</span>
 		</h2>
 
 		<ul class="c-box-general">

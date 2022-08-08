@@ -8,7 +8,24 @@
   @include list-unstyled();
 
   @include media-breakpoint-up(lg) {
+    align-items: center;
     display: flex;
     gap: 1.875rem;
+
+    li {
+      text-align: left;
+
+      &:last-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  li {
+    text-align: center;
+
+    &:last-child {
+      margin-top: 1rem;
+    }
   }
 }

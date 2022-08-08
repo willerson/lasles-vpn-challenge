@@ -1,0 +1,29 @@
+/*
+*
+* Sitemap list
+*
+*/
+
+.c-sitemap-list {
+  @include list-unstyled();
+  width: max-content;
+
+  &__item {
+    margin-bottom: 0.625rem;
+
+    &:first-child {
+      margin-bottom: 1.25rem;
+    }
+  }
+
+  &__title {
+    @include font-size(1.125rem);
+    color: css-color('darken');
+    font-weight: font-weight('bold');
+    text-decoration: none;
+
+    &:hover {
+      color: css-color('darken');
+    }
+  }
+}

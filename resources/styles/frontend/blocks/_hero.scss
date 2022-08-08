@@ -1,0 +1,32 @@
+.b-hero {
+  margin-top: 6.25rem;
+
+  &__grid {
+    @include media-breakpoint-up(lg) {
+      align-items: center;
+      display: grid;
+      gap: rem(50px);
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__content {
+    h1 {
+      color: css-color('darken');
+      margin-bottom: rem(20px);
+    }
+
+    p,
+    a {
+      margin-bottom: rem(50px);
+    }
+  }
+
+  &__figure {
+    width: 110%;
+
+    img {
+      width: 100%;
+    }
+  }
+}

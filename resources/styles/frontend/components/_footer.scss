@@ -1,0 +1,69 @@
+.c-footer {
+  background-color: css-color('gray-100');
+  padding-bottom: 6.25rem;
+  padding-top: 14.25rem;
+  width: 100%;
+
+  @include media-breakpoint-up(md) {
+    padding-top: 11.25rem;
+  }
+
+  .container {
+    @include media-breakpoint-up(lg) {
+      display: grid;
+      grid-template-columns: rem(230px) 1fr;
+      justify-content: space-between;
+    }
+
+    @include media-breakpoint-up(xl) {
+      gap: rem(230px);
+    }
+  }
+
+  .c-logo {
+    margin-bottom: 1.25rem;
+  }
+
+  &__text,
+  .c-social {
+    margin-bottom: 1.875rem;
+  }
+
+  &__copyright {
+    color: css-color('gray-700');
+  }
+
+  &__list-items {
+    @include media-breakpoint-between(lg, xl) {
+      margin-left: 10rem;
+    }
+
+    @include media-breakpoint-up(md) {
+      display: grid;
+      gap: rem(126px);
+      grid-template-columns: rem(320px) rem(120px);
+
+      .c-sitemap-list {
+        margin: unset;
+        text-align: left;
+      }
+    }
+
+    @include media-breakpoint-up(xl) {
+      grid-template-columns: 1fr rem(120px);
+    }
+
+    .c-sitemap-list {
+      margin-bottom: 2rem;
+      margin-inline: auto;
+      text-align: center;
+    }
+  }
+
+  &__first-items {
+    @include media-breakpoint-up(md) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

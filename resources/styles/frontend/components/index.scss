@@ -5,23 +5,25 @@
   @see https://www.componentdriven.org
 \* ------------------------------------------------------------ */
 @import './block';
+@import './box-general-data';
 @import './button';
 @import './button-collection';
+@import './footer';
+@import './header';
 @import './icon';
-@import './logo';
 @import './link';
 @import './login';
+@import './logo';
 @import './menu';
 @import './menu-main';
 @import './nav';
-@import './header';
+@import './plans';
+@import './sitemap-list';
+@import './social';
 @import './testimonial';
 @import './text';
 @import './title';
 @import './top-section';
-@import './box-subscribe';
-@import './plans';
-@import './box-general-data';
 // @import './checkbox';
 // @import './input';
 // @import './radio';

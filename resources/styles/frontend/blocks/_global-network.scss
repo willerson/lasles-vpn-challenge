@@ -1,0 +1,37 @@
+.b-global-network {
+  &__content {
+    width: 100%;
+  }
+
+  &__figure {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__brands {
+    @include list-unstyled();
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+  }
+
+  &__brand {
+    max-width: 11.875rem;
+
+    img {
+      cursor: pointer;
+      max-width: 100%;
+      transition: 0.3s ease-in-out;
+      width: 100%;
+
+      &:hover {
+        filter: drop-shadow(3px 5px 3px css-color('gray-700'));
+      }
+    }
+  }
+}

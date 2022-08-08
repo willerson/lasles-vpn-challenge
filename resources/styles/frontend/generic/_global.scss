@@ -20,13 +20,13 @@ body {
 }
 
 body {
-  padding-top: rem(map.get($header-height, sm));
+  // padding-top: rem(map.get($header-height, sm));
 
-  @include media-breakpoint-up(md) {
-    padding-top: rem(map.get($header-height, md));
-  }
+  // @include media-breakpoint-up(md) {
+  //   padding-top: rem(map.get($header-height, md));
+  // }
 
-  @include media-breakpoint-up(lg) {
-    padding-top: rem(map.get($header-height, lg));
-  }
+  // @include media-breakpoint-up(lg) {
+  //   padding-top: rem(map.get($header-height, lg));
+  // }
 }

@@ -21,14 +21,9 @@
 					<li><a href="http://" class="c-link">Testimonials</a></li>
 					<li><a href="http://" class="c-link">Help</a></li>
 				</ul>
-			</div>
-
-			<!-- <?php fuerza_component( 'button-collection', $header_buttons + [ 'class' => 'c-header__actions' ] ); ?> -->
-
-			<div>
 				<ul class="c-login">
 					<li><a href="http://" class="c-link c-link--bold">Sign In</a></li>
-					<li><a href="http://" class="c-btn c-btn--primary-o">Sign Up</a></li>
+					<li><a href="http://" class="c-btn c-btn--secondary-o c-btn--md">Sign Up</a></li>
 				</ul>
 			</div>
 

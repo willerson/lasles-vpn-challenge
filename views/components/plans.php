@@ -12,11 +12,16 @@
 			<span>Plans</span>
 		</h2>
 
+		<?php \Fuerza::render( 'views/components/top-section', [
+			'title' => "Choose Your Plan",
+			'text' => "Let's choose the package that is best for you and explore it happily and cheerfully.",
+		] ); ?>
+
 		<ul class="c-plans">
 			<li class="c-plans__plan">
 				<div>
 					<figure class="c-plans__figure">
-						<img src="<?php echo esc_url( \Fuerza::core()->assets()->getAssetUrl( 'images/plan-box.png' ) ); ?>" alt="">
+						<img src="<?php echo esc_url( \Fuerza::core()->assets()->getAssetUrl( 'images/free-plan.png' ) ); ?>" alt="">
 					</figure>
 					<h5>Free Plan</h5>
 					<ul class="c-plans__list">
@@ -54,7 +59,7 @@
 			<li class="c-plans__plan">
 				<div>
 					<figure class="c-plans__figure">
-						<img src="<?php echo esc_url( \Fuerza::core()->assets()->getAssetUrl( 'images/plan-box.png' ) ); ?>" alt="">
+						<img src="<?php echo esc_url( \Fuerza::core()->assets()->getAssetUrl( 'images/standard-plan.png' ) ); ?>" alt="">
 					</figure>
 					<h5>Standard Plan</h5>
 					<ul class="c-plans__list">
@@ -98,7 +103,7 @@
 			<li class="c-plans__plan c-plans__plan--active	">
 				<div>
 					<figure class="c-plans__figure">
-						<img src="<?php echo esc_url( \Fuerza::core()->assets()->getAssetUrl( 'images/plan-box.png' ) ); ?>" alt="">
+						<img src="<?php echo esc_url( \Fuerza::core()->assets()->getAssetUrl( 'images/premium-plan.png' ) ); ?>" alt="">
 					</figure>
 					<h5>Premium Plan</h5>
 					<ul class="c-plans__list">

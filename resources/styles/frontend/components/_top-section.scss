@@ -6,6 +6,7 @@
 
 .c-top-section {
   @include margin-x(auto);
+  margin-bottom: 3.75rem;
   max-width: 34.688rem;
 
   h2 {

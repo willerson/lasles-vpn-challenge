@@ -11,22 +11,20 @@
 
 ?>
 
-<section <?php echo fuerza_block_attrs( $block ); ?>>
-	<?php fuerza_component( 'background', $background ); ?>
+ <section class="b-hero" <?php fuerza_block_attrs( $block ); ?>>
+	<div class="container b-hero__grid">
+		<div class="b-hero__content">
+			<h1>
+				<?php echo wp_kses_post( $title ); ?>
+			</h1>
+			<p>
+				<?php echo wp_kses_post( $description ); ?>
+			</p>
 
-	<div class="container">
-		<div class="row">
-			<div class="col-6">
-				<h2 class="c-title b-hero__title">
-					<?php echo wp_kses_post( $title ); ?>
-				</h2>
-
-				<div class="c-text">
-					<?php echo wp_kses_post( $text ); ?>
-				</div>
-
-				<?php fuerza_component( 'button-collection', $buttons + [ 'class' => 'b-hero__buttons' ] ); ?>
-			</div>
+			<a href="#" class="c-btn c-btn--primary c-btn--lg">Get Started</a>
 		</div>
+		<figure class="b-hero__figure">
+			<img src="<?php echo wp_kses_post( $image ); ?>" alt="">
+		</figure>
 	</div>
-</section>
+ </section>

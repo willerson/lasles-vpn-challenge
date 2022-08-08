@@ -14,7 +14,7 @@
 		</h2>
 		<ul class="c-login">
 			<li><a href="http://" class="c-link c-link--bold">Sign In</a></li>
-			<li><a href="http://" class="c-btn c-btn--primary-o">Sign Up</a></li>
+			<li><a href="http://" class="c-btn c-btn--primary-o c-btn--md">Sign Up</a></li>
 		</ul>
 	</div>
 </section>

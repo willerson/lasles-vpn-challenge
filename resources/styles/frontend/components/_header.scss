@@ -7,18 +7,19 @@
  *
  */
 .c-header {
-  background: css-color('gray-100');
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
+  // background: css-color('gray-100');
+  // left: 0;
+  // position: fixed;
+  // right: 0;
+  // top: 0;
   z-index: 999;
 
   &__body {
-    @include padding-y(2.851rem);
+    // @include padding-y(2.851rem);
     align-items: center;
     display: flex;
     height: rem(map.get($header-height, sm));
+    justify-content: space-between;
 
     @include media-breakpoint-up(md) {
       height: rem(map.get($header-height, md));
@@ -32,11 +33,10 @@
   &__menu {
     --viewport-height: auto;
 
-    flex: 1 1;
     margin-left: rem(50px);
 
     @include media-breakpoint-down(lg) {
-      background: css-color('gray-100');
+      background: linear-gradient(180deg, css-color('white') 0%, css-color('gray-100') 100%);
       bottom: 0;
       height: var(--viewport-height);
       left: 0;
@@ -97,12 +97,17 @@
 
   .c-header__menu {
     @include desktop-down {
-      top: map.get($header-height, lg) - 10;
+      top: 100px;
     }
 
     @include desktop-up {
       display: flex;
-      justify-content: center;
+      gap: rem(100px);
+      justify-content: space-between;
+
+      @include media-breakpoint-up(xl) {
+        gap: rem(150px);
+      }
     }
   }
 }

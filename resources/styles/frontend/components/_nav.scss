@@ -6,9 +6,23 @@
 
 .c-nav {
   @include list-unstyled();
+  margin-bottom: 5rem;
 
   @include media-breakpoint-up(lg) {
+    align-items: center;
+    background-color: unset;
     display: flex;
     gap: 2.5rem;
+    margin-bottom: unset;
+
+    li {
+      margin-bottom: 0;
+      text-align: left;
+    }
+  }
+
+  li {
+    margin-bottom: 1rem;
+    text-align: center;
   }
 }
