@@ -14,9 +14,9 @@
  <section class="b-hero" <?php fuerza_block_attrs( $block ); ?>>
 	<div class="container b-hero__grid">
 		<div class="b-hero__content">
-			<h1>
+			<h2>
 				<?php echo wp_kses_post( $title ); ?>
-			</h1>
+			</h2>
 			<p>
 				<?php echo wp_kses_post( $description ); ?>
 			</p>
